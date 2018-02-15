@@ -40,6 +40,7 @@ namespace MissionPlanner
             this.fullScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.readonlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectionOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.connectionListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuFlightData = new System.Windows.Forms.ToolStripButton();
             this.MenuFlightPlanner = new System.Windows.Forms.ToolStripButton();
             this.MenuInitConfig = new System.Windows.Forms.ToolStripButton();
@@ -48,16 +49,17 @@ namespace MissionPlanner
             this.MenuTerminal = new System.Windows.Forms.ToolStripButton();
             this.MenuHelp = new System.Windows.Forms.ToolStripButton();
             this.MenuDonate = new System.Windows.Forms.ToolStripButton();
+            this.AutoGuide_Button = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuConnect = new System.Windows.Forms.ToolStripButton();
             this.toolStripConnectionControl = new MissionPlanner.Controls.ToolStripConnectionControl();
             this.MenuArduPilot = new System.Windows.Forms.ToolStripButton();
             this.menu = new MissionPlanner.Controls.MyButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.connectionListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenu.SuspendLayout();
             this.CTX_mainmenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            this.AutoGuide_Button.Click += new System.EventHandler(this.AutoGuide_Button_Click);
             // 
             // MainMenu
             // 
@@ -75,6 +77,7 @@ namespace MissionPlanner
             this.MenuTerminal,
             this.MenuHelp,
             this.MenuDonate,
+            this.AutoGuide_Button,
             this.MenuConnect,
             this.toolStripConnectionControl,
             this.MenuArduPilot});
@@ -86,6 +89,7 @@ namespace MissionPlanner
             // 
             // CTX_mainmenu
             // 
+            this.CTX_mainmenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.CTX_mainmenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.autoHideToolStripMenuItem,
             this.fullScreenToolStripMenuItem,
@@ -121,6 +125,12 @@ namespace MissionPlanner
             this.connectionOptionsToolStripMenuItem.Name = "connectionOptionsToolStripMenuItem";
             resources.ApplyResources(this.connectionOptionsToolStripMenuItem, "connectionOptionsToolStripMenuItem");
             this.connectionOptionsToolStripMenuItem.Click += new System.EventHandler(this.connectionOptionsToolStripMenuItem_Click);
+            // 
+            // connectionListToolStripMenuItem
+            // 
+            this.connectionListToolStripMenuItem.Name = "connectionListToolStripMenuItem";
+            resources.ApplyResources(this.connectionListToolStripMenuItem, "connectionListToolStripMenuItem");
+            this.connectionListToolStripMenuItem.Click += new System.EventHandler(this.connectionListToolStripMenuItem_Click);
             // 
             // MenuFlightData
             // 
@@ -195,6 +205,13 @@ namespace MissionPlanner
             this.MenuDonate.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.MenuDonate.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
+            // AutoGuide_Button
+            // 
+            resources.ApplyResources(this.AutoGuide_Button, "AutoGuide_Button");
+            this.AutoGuide_Button.ForeColor = System.Drawing.Color.White;
+            this.AutoGuide_Button.Image = global::MissionPlanner.Properties.Resources.autoguideicon;
+            this.AutoGuide_Button.Name = "AutoGuide_Button";
+            // 
             // MenuConnect
             // 
             this.MenuConnect.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -243,12 +260,6 @@ namespace MissionPlanner
             this.panel1.Name = "panel1";
             this.panel1.MouseLeave += new System.EventHandler(this.MainMenu_MouseLeave);
             // 
-            // connectionListToolStripMenuItem
-            // 
-            this.connectionListToolStripMenuItem.Name = "connectionListToolStripMenuItem";
-            resources.ApplyResources(this.connectionListToolStripMenuItem, "connectionListToolStripMenuItem");
-            this.connectionListToolStripMenuItem.Click += new System.EventHandler(this.connectionListToolStripMenuItem_Click);
-            // 
             // MainV2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -292,5 +303,6 @@ namespace MissionPlanner
         private System.Windows.Forms.ToolStripMenuItem connectionOptionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton MenuArduPilot;
         private System.Windows.Forms.ToolStripMenuItem connectionListToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AutoGuide_Button;
     }
 }

@@ -38,6 +38,8 @@ namespace MissionPlanner.GCSViews
     {
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
+        Auto_Guide.Auto_Guide AutoGuide;
+
         public static bool threadrun;
         int tickStart;
         RollingPointPairList list1 = new RollingPointPairList(1200);
@@ -4547,6 +4549,12 @@ namespace MissionPlanner.GCSViews
 
             MainV2.comPort.sendPacket(go, MainV2.comPort.MAV.sysid, MainV2.comPort.MAV.compid);
         }
+        public void autoguideform()
+        {
+            AutoGuide = new Auto_Guide.Auto_Guide();
+            AutoGuide.Show();
+        }
+
     }
 }
  

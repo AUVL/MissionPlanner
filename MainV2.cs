@@ -3901,5 +3901,10 @@ namespace MissionPlanner
                 //);
             }
         }
+        private void AutoGuide_Button_Click(object sender, EventArgs e)
+        {
+            FlightData.autoguideform();
+        }
+
     }
 }
